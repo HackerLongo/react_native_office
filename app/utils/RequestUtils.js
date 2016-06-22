@@ -10,35 +10,35 @@ export function request(url, method, body, headers) {
   console.log('url = ', url);
   var isOk;
   return new Promise((resolve, reject) => {
-    const timeoutId = setTimeout(() => reject(new Error('request timeout')), 30000);
-    fetch(url, {
-        method: method,
-        headers: headers,
-        body: body,
-      })
-      .then((response) => {
-        if (response.ok) {
-          isOk = true;
-        } else {
-          isOk = false;
-        }
-        return response.json();
-      })
-      .then((responseData) => {
-        clearTimeout(timeoutId);
-        if (isOk) {
-          console.log('responseData = ', responseData);
-          resolve(responseData);
-        } else {
-          reject(responseData);
-        }
-      })
-      .catch((error) => {
-        clearTimeout(timeoutId);
-        reject(error);
-      });
+    // const timeoutId = setTimeout(() => reject(new Error('request timeout')), 30000);
+    // fetch(url, {
+    //     method: method,
+    //     headers: headers,
+    //     body: body,
+    //   })
+    //   .then((response) => {
+    //     if (response.ok) {
+    //       isOk = true;
+    //     } else {
+    //       isOk = false;
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((responseData) => {
+    //     clearTimeout(timeoutId);
+    //     if (isOk) {
+    //       console.log('responseData = ', responseData);
+    //       resolve(responseData);
+    //     } else {
+    //       reject(responseData);
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     clearTimeout(timeoutId);
+    //     reject(error);
+    //   });
 
-    //resolve(getResponseData(url));
+    resolve(getResponseData(url));
   })
 }
 
@@ -59,6 +59,8 @@ function getResponseData(url) {
     return data.TASK_DETAIL_DATA;
   else if (url.indexOf("viewTaskForm") > 0)
     return data.TASK_LIST_APPROVE_DATA;
+  else if (url.indexOf("processNodeButtons") > 0)
+    return data.NODE_BUTTON_DATA;
   else if (url.indexOf("completeTask") > 0)
     return data.APPROVE_RESULT_DATA;
   else if (url.indexOf("bpmType") > 0)

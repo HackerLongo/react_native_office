@@ -15,7 +15,7 @@
     "react-native-device-info": "^0.9.3",
     "react-native-dropdown-android": "0.0.11",
     "react-native-fs": "^1.2.0",
-    "react-native-gifted-spinner": "0.0.3",
+    "react-native-gifted-spinner": "0.0.4",
     "react-native-image-picker": "^0.18.15",
     "react-native-material-kit": "^0.3.0",
     "react-native-network-info": "^0.2.0",

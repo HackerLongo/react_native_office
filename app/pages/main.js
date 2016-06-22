@@ -86,14 +86,14 @@ export default class MainScreen extends React.Component{
         });
       }
     }
-    // setTimeout(() => {
-    //   InteractionManager.runAfterInteractions(() => {
-    //   navigator.push({
-    //       name: 'gesturePassword',
-    //       component: GesturePassword,
-    //     });
-    //   });
-    // }, 1);
+    setTimeout(() => {
+      InteractionManager.runAfterInteractions(() => {
+      navigator.push({
+          name: 'gesturePassword',
+          component: GesturePassword,
+        });
+      });
+    }, 1);
   }
 
   checkVersion(){

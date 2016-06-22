@@ -10,6 +10,7 @@
 >*   如果编译成功后运行报错,注意下 react 和 react-native 的版本匹配
 >*  可以手动执行 npm install react@15.0.2 --save
 >*  因为google下来的结果 15.1.0很大程度会报错
+
 ## ABOUT react_native_office
 公司的内部办公软件，很多界面和数据因为公司机密没法用接口来实现，所以我在constants文件夹中添加了一个VirtualData常量类
 来虚拟http请求的过程，http的封装在utils/RequestUtils，注释掉的部分是我实际代码中使用的fetch请求。这个项目是我试着学react-narive写的第一个项目，

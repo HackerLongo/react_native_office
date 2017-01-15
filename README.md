@@ -1,15 +1,5 @@
 ## HOW TO USE
->* 1.cd react_native_office && npm install
->* 2.修改react_native_office/node_modules/react-native-calendar-android/src/Calendar.js文件
->*  由于react-native升级到0.26之后的写法改变，而react-native-calendar-android没有更新到0.26，所以我们手动改下啦～～
->*  将第5行 var { requireNativeComponent, PropTypes, View} = ReactNative;
->*  改为 var { requireNativeComponent, View } = ReactNative;
->*      var {PropTypes} = React;
->* 3.好了 接下来执行 react-native run-android
->* 4.特别注意!!
->*   如果编译成功后运行报错,注意下 react 和 react-native 的版本匹配
->*  可以手动执行 npm install react@15.0.2 --save
->*  因为google下来的结果 15.1.0很大程度会报错
+>* cd react_native_office && npm install
 
 ## ABOUT react_native_office
 公司的内部办公软件，很多界面和数据因为公司机密没法用接口来实现，所以我在constants文件夹中添加了一个VirtualData常量类

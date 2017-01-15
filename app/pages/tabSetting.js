@@ -39,7 +39,7 @@ export default class SettingTab extends React.Component {
     this.onLogout = this.onLogout.bind(this);
     this.onVersion = this.onVersion.bind(this);
     this.onHelp = this.onHelp.bind(this);
-    props.dispatch(fetchAvatar(props.login.rawData.userId));
+    //props.dispatch(fetchAvatar(props.login.rawData.userId));
   }
 
   componentWillReceiveProps(nextProps) {

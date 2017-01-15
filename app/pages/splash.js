@@ -48,7 +48,6 @@ class SplashScreen extends React.Component{
         }
       }).catch((err)=>{
         console.log('setAotoLogin error ==> ', err);
-        if(!err)
           InteractionManager.runAfterInteractions(() => {
             navigator.resetTo({
               component: LoginContainer,

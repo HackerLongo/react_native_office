@@ -1,7 +1,3 @@
-/**
- * @providesModule ToastAndroid
- */
-
 'use strict';
 
 /**
